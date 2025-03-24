@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="410dp"
+        android:layout_height="616dp"
+        android:layout_marginBottom="1dp"
+        android:background="@drawable/terreno"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <ImageView
+            android:id="@+id/imgDelantero"
+            android:layout_width="match_parent"
+            android:layout_height="115dp"
+            tools:src="@tools:sample/avatars" />
+
+        <ImageView
+            android:id="@+id/imgMediapunta"
+            android:layout_width="match_parent"
+            android:layout_height="114dp"
+            tools:src="@tools:sample/avatars" />
+
+        <ImageView
+            android:id="@+id/imgMediocentro"
+            android:layout_width="match_parent"
+            android:layout_height="117dp"
+            tools:src="@tools:sample/avatars" />
+
+        <ImageView
+            android:id="@+id/imgDefensa"
+            android:layout_width="match_parent"
+            android:layout_height="114dp"
+            tools:src="@tools:sample/avatars" />
+
+        <ImageView
+            android:id="@+id/imgPortero"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:src="@tools:sample/avatars" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvValorEquipo"
+        android:layout_width="174dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="30dp"
+        android:text="Valor de equipo:"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
