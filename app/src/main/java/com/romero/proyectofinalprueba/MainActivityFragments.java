@@ -17,11 +17,13 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.romero.proyectofinalprueba.fragments.FragmentMercado;
+import com.romero.proyectofinalprueba.fragments.FragmentPlantilla;
 
 public class MainActivityFragments extends AppCompatActivity {
 
-    ImageView imagen, btnMercado, btnPlantilla, btnEquipo;
-    TextView nombreEquipo;
+    private ImageView imagen, btnMercado, btnPlantilla, btnEquipo;
+    private TextView nombreEquipo, tvSaldo;
+    private int saldo = 200;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +35,9 @@ public class MainActivityFragments extends AppCompatActivity {
         btnPlantilla=findViewById(R.id.btnPlantilla);
         imagen=findViewById(R.id.imgEquipoEscogido);
         nombreEquipo=findViewById(R.id.nombreEquipoEscogido);
+        tvSaldo=findViewById(R.id.saldoInicial);
 
+        tvSaldo.setText("Saldo: " + saldo + "M");
         int img  = getIntent().getIntExtra("imgEquipo", 0);
         String nombre = getIntent().getStringExtra("teamName");
 
@@ -52,13 +56,16 @@ public class MainActivityFragments extends AppCompatActivity {
         public void onClick(View v) {
             imagen.setVisibility(View.GONE);
             nombreEquipo.setVisibility(View.GONE);
-            getSupportFragmentManager().beginTransaction().replace(R.id.container_bottom, new FragmentMercado()).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.container_bottom, new FragmentMercado(tvSaldo)).commit();
         }
     });
 
     btnPlantilla.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View v) {
+            imagen.setVisibility(View.GONE);
+            nombreEquipo.setVisibility(View.GONE);
+            getSupportFragmentManager().beginTransaction().replace(R.id.container_bottom, new FragmentPlantilla()).commit();
 
         }
     });

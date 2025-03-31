@@ -51,13 +51,13 @@ public class DAOEscudos {
         jugador.add(new Jugador(R.drawable.virgil, 35, 89, "Defensa", "Van Dijk"));
 
         /*CENTROCAMPISTAS*/
-        jugador.add(new Jugador(R.drawable.bellingham, 45, 90, "Mediocampista", "Bellingham"));
-        jugador.add(new Jugador(R.drawable.fernandes, 25, 84, "Mediocampista", "Bruno"));
-        jugador.add(new Jugador(R.drawable.debruyne, 20, 88, "Mediocampista", "De Bruyne"));
+        jugador.add(new Jugador(R.drawable.bellingham, 45, 90, "Mediapunta", "Bellingham"));
+        jugador.add(new Jugador(R.drawable.fernandes, 25, 84, "Mediapunta", "Bruno"));
+        jugador.add(new Jugador(R.drawable.debruyne, 20, 88, "Mediapunta", "De Bruyne"));
+        jugador.add(new Jugador(R.drawable.pedri, 47, 89, "Mediocampista", "Pedri"));
         jugador.add(new Jugador(R.drawable.kimmich, 36, 87, "Mediocampista", "Kimmich"));
         jugador.add(new Jugador(R.drawable.modric, 12, 85, "Mediocampista", "Modric"));
-        jugador.add(new Jugador(R.drawable.odergard, 21, 86, "Mediocampista", "Odegaard"));
-        jugador.add(new Jugador(R.drawable.pedri, 47, 89, "Mediocampista", "Pedri"));
+        jugador.add(new Jugador(R.drawable.odergard, 21, 86, "Mediapunta", "Odegaard"));
         jugador.add(new Jugador(R.drawable.rice, 32, 87, "Mediocampista", "Rice"));
         jugador.add(new Jugador(R.drawable.rodri, 50, 90, "Mediocampista", "Rodri"));
         jugador.add(new Jugador(R.drawable.valverde, 44, 89, "Mediocampista", "Valverde"));

@@ -5,13 +5,13 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
 
     <LinearLayout
         android:id="@+id/linearLayout3"
-        android:layout_width="410dp"
-        android:layout_height="616dp"
+        android:layout_width="417dp"
+        android:layout_height="555dp"
         android:layout_marginBottom="1dp"
         android:background="@drawable/terreno"
         android:orientation="vertical"
@@ -50,13 +50,29 @@
             tools:src="@tools:sample/avatars" />
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/tvValorEquipo"
-        android:layout_width="174dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="30dp"
-        android:text="Valor de equipo:"
+    <LinearLayout
+        android:layout_width="403dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="4dp"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/tvValorEquipo"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/tvTotalValor"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:layout_weight="1" />
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

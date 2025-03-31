@@ -51,6 +51,7 @@ public class MercadoAdapter extends BaseAdapter {
         TextView nombre = convertView.findViewById(R.id.tvNombre);
         TextView precio = convertView.findViewById(R.id.tvPrecio);
         TextView media = convertView.findViewById(R.id.tvMedia);
+        ImageView imgFavorito = convertView.findViewById(R.id.imgFavourite);
 
         Jugador jugador = jugadores.get(position);
 
@@ -59,6 +60,20 @@ public class MercadoAdapter extends BaseAdapter {
         nombre.setText(jugador.getNombre());
         precio.setText(String.valueOf(jugador.getMonedas())+"M");
         media.setText(String.valueOf(jugador.getMedia())+"GRL");
+
+        if(jugador.isFavorito()){
+            imgFavorito.setImageResource(R.drawable.baseline_favorite_24);
+        }else{
+            imgFavorito.setImageResource(R.drawable.baseline_favorite_border_24);
+        }
+
+        imgFavorito.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                jugador.setFavorito(!jugador.isFavorito());
+                notifyDataSetChanged();
+            }
+        });
 
         return convertView;
     }
