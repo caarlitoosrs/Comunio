@@ -21,7 +21,7 @@ public class FragmentPlantilla extends Fragment {
 
 
     private ImageView imgDelantero, imgMediapunta, imgMediocentro, imgDefensa, imgPortero;
-    private TextView tvTotalValor, tvValor;
+    private TextView tvValor;
     private SharedViewModel viewModel;
 
     @Override
@@ -35,7 +35,7 @@ public class FragmentPlantilla extends Fragment {
         imgDefensa = view.findViewById(R.id.imgDefensa);
         imgPortero = view.findViewById(R.id.imgPortero);
         tvValor = view.findViewById(R.id.tvValorEquipo);
-        tvTotalValor= view.findViewById(R.id.tvTotalValor);
+
 
 
         viewModel = new ViewModelProvider(requireActivity()).get(SharedViewModel.class);

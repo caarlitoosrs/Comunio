@@ -77,4 +77,13 @@ public class MercadoAdapter extends BaseAdapter {
 
         return convertView;
     }
+
+    public void actualizarLista(ArrayList<Jugador> nuevaLista) {
+        jugadores.clear();  // Limpiar la lista actual
+        jugadores.addAll(nuevaLista); // Agregar nuevos datos
+        notifyDataSetChanged(); // Notificar cambios
+    }
+
+
+
 }

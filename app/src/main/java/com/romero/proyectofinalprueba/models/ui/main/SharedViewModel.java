@@ -1,5 +1,7 @@
 package com.romero.proyectofinalprueba.models.ui.main;
 
+import android.util.Log;
+
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
@@ -25,10 +27,12 @@ public class SharedViewModel extends ViewModel {
         return jugadoresComprados;
     }
 
+    //Actualiza el saldo despues de comprar
     public void actualizarSaldo(int nuevoSaldo) {
         saldoActual.setValue(nuevoSaldo);
     }
 
+    //Agrega jugador a la plantilla
     public void agregarJugador(String posicion, Jugador jugador) {
         HashMap<String, Jugador> jugadores = jugadoresComprados.getValue();
         if (jugadores != null && !jugadores.containsKey(posicion)) {
